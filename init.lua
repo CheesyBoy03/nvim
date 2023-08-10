@@ -3,7 +3,7 @@ require("core.plugins")
 require("core.mappings")
 require("core.colorscheme")
 
-require("plugins.tree")
+require("plugins.nvim-tree")
 require("plugins.buffline")
 require("plugins.comments")
 require("plugins.autopairs")
