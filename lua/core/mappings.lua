@@ -9,12 +9,12 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 -- Tabs
 vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
 vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<leader>s', ':BufferLineSortByTabs<CR>')
 vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
 vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 
 -- NvimTree
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>te", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>tf", ":NvimTreeFindFile!<CR>")
 
 -- Other
 vim.keymap.set("n", "<leader>q", ":q<CR>")

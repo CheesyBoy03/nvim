@@ -5,7 +5,6 @@ require("core.colorscheme")
 
 require("plugins.tree")
 require("plugins.buffline")
-require("plugins.lualine")
 require("plugins.comments")
 require("plugins.autopairs")
 require("plugins.autotag")

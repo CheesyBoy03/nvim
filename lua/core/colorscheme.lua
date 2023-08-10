@@ -1,4 +1,5 @@
-vim.cmd('colorscheme catppuccin')
+vim.opt.termguicolors = true
+vim.cmd('colorscheme nord')
 vim.fn.sign_define({
   {
     name = 'DiagnosticSignError',

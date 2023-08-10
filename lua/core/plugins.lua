@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "catppuccin/nvim", name = "catppuccin" },
+    { "shaunsingh/nord.nvim", name = "nord" },
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
@@ -26,9 +26,6 @@ require("lazy").setup({
         end,
         dependencies = { {'nvim-tree/nvim-web-devicons'}}
     },
-    { "nvim-lualine/lualine.nvim" },
-    { "williamboman/mason.nvim" },
-    { "williamboman/mason-lspconfig.nvim" },
     { "axelvc/template-string.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
     { "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -41,6 +38,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "nvim-tree/nvim-web-devicons" },
 	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
+    { "williamboman/mason-lspconfig.nvim" },
 	{ "windwp/nvim-autopairs" },
 	{ "terrortylor/nvim-comment" },
 	{ "windwp/nvim-ts-autotag" },
@@ -55,5 +53,4 @@ require("lazy").setup({
 			require("lsp-progress").setup()
 		end,
 	},
-	{ "folke/which-key.nvim" },
 })
