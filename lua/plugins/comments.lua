@@ -1,4 +1,4 @@
-require('nvim_comment').setup({
-    line_mapping = "<leader>cl",
+require('Comment').setup({
+    line_mapping = "<leader>/",
     operator_mapping = "<leader>co"
 })

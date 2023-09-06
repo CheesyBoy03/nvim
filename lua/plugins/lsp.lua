@@ -1,7 +1,7 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-local servers = { "tsserver", "cssls", "eslint", "lua_ls" }
+local servers = { "tsserver", "cssls", "eslint", "lua_ls", "rust_analyzer", }
 
 local lspconfig = require('lspconfig')
 for _, server in pairs(servers) do

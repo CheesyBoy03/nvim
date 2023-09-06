@@ -6,15 +6,21 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
--- Tabs
-vim.keymap.set('n', '<leader>x', ':BufferLinePickClose<CR>')
-vim.keymap.set('n', '<leader>X', ':BufferLineCloseRight<CR>')
-vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>')
-vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
+-- Native tabs
+vim.keymap.set("n", "[t", ":tabprevious<CR>")
+vim.keymap.set("n", "]t", ":tabnext<CR>")
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>tx", ":tabclose<CR>")
+
+-- Window management
+vim.keymap.set("n", "<leader>sv", "<C-w>v")
+vim.keymap.set("n", "<leader>sh", "<C-w>s")
 
 -- NvimTree
-vim.keymap.set("n", "<leader>te", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>tf", ":NvimTreeFindFile!<CR>")
+vim.keymap.set("n", "<leader>e", ":NvimTreeFindFile!<CR>")
+
+-- Telescope
+vim.keymap.set("n", "<leader>tb", ":Telescope buffers<CR>")
 
 -- Other
 vim.keymap.set("n", "<leader>q", ":q<CR>")

@@ -12,20 +12,27 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "shaunsingh/nord.nvim", name = "nord" },
+    { "lewis6991/gitsigns.nvim" },
+    {
+      -- Set lualine as statusline
+      'nvim-lualine/lualine.nvim',
+      -- See `:help lualine.txt`
+      opts = {
+        options = {
+          icons_enabled = false,
+          component_separators = '|',
+          section_separators = '',
+        },
+      },
+    },
+    { 'rktjmp/lush.nvim' },
+    { "metalelf0/jellybeans-nvim" },
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
     },
-    {
-        'glepnir/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            require('dashboard').setup {}
-        end,
-        dependencies = { {'nvim-tree/nvim-web-devicons'}}
-    },
+    { "L3MON4D3/LuaSnip" },
     { "axelvc/template-string.nvim" },
 	{ "nvim-treesitter/nvim-treesitter" },
     { "WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -40,17 +47,8 @@ require("lazy").setup({
 	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
     { "williamboman/mason-lspconfig.nvim" },
 	{ "windwp/nvim-autopairs" },
-	{ "terrortylor/nvim-comment" },
+	{ "numToStr/Comment.nvim" },
 	{ "windwp/nvim-ts-autotag" },
 	{ "nvim-tree/nvim-tree.lua" },
-	{ "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	{
-		"linrongbin16/lsp-progress.nvim",
-		event = { "VimEnter" },
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("lsp-progress").setup()
-		end,
-	},
 })
