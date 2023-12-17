@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true
-vim.cmd('colorscheme jellybeans-nvim')
+vim.cmd('colorscheme serenity')
 vim.fn.sign_define({
   {
     name = 'DiagnosticSignError',

@@ -12,32 +12,65 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    { "kylechui/nvim-surround", event="VeryLazy" },
+    { "epwalsh/obsidian.nvim" },
+    {
+      "pmizio/typescript-tools.nvim",
+      dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+      opts = {},
+    },
+    { "folke/zen-mode.nvim" },
+    {
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		event = { "BufEnter" },
+		config = function()
+			-- Turn on LSP, formatting, and linting status and progress information
+			require("fidget").setup({
+				text = {
+					spinner = "dots_negative",
+				},
+			})
+		end,
+	},
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    { "f-person/git-blame.nvim" },
+    {
+        'Wansmer/serenity.nvim',
+        name = 'serenity',
+        config = function()
+            require('serenity').setup()
+        end,
+    },
+    {
+      'Wansmer/langmapper.nvim',
+      lazy = false,
+      priority = 1, -- High priority is needed if you will use `autoremap()`
+      config = function()
+        require('langmapper').setup({--[[ your config ]]})
+      end,
+    },
     { "lewis6991/gitsigns.nvim" },
     {
-      -- Set lualine as statusline
-      'nvim-lualine/lualine.nvim',
-      -- See `:help lualine.txt`
-      opts = {
-        options = {
-          icons_enabled = false,
-          component_separators = '|',
-          section_separators = '',
-        },
-      },
-    },
-    { 'rktjmp/lush.nvim' },
-    { "metalelf0/jellybeans-nvim" },
-	{
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
-		dependencies = { "nvim-lua/plenary.nvim" },
+        "nvim-telescope/telescope.nvim",
+        tag = '0.1.3',
+        dependencies = { 'nvim-lua/plenary.nvim' }
     },
     { "L3MON4D3/LuaSnip" },
-    { "axelvc/template-string.nvim" },
+
 	{ "nvim-treesitter/nvim-treesitter" },
-    { "WhoIsSethDaniel/mason-tool-installer.nvim" },
     { "nvim-treesitter/nvim-treesitter-context" },
-	{ "neovim/nvim-lspconfig" },
+    { "axelvc/template-string.nvim" },
+    { "WhoIsSethDaniel/mason-tool-installer.nvim" },
+	{
+        "neovim/nvim-lspconfig",
+        opt = {
+            inlay_hints = { enabled = true },
+        }
+    },
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },

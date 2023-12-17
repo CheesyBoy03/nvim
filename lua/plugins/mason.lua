@@ -7,7 +7,8 @@ require('mason-tool-installer').setup {
     'lua-language-server',
     'prettierd',
     'stylua',
-    'typescript-language-server'
+    'gopls',
+    'rust-analyzer',
   },
   auto_update = true,
 }

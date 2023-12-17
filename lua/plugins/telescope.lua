@@ -1,8 +1,3 @@
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
-
-
 require('nvim-web-devicons').setup({
   override = {},
   default = true
@@ -16,11 +11,6 @@ require('telescope').setup {
     buffers = {
         show_all_buffers = true,
         sort_mru = true,
-        mappings = {
-          i = {
-            ["<c-d>"] = "delete_buffer",
-          },
-        },
     }
   },
   defaults = {
